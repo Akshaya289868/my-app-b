@@ -1,24 +1,25 @@
-import "./Products.css"
+import React from "react";
+import "./Products.css";
+import { appContext } from "../App";
+import { useContext } from "react";
 export default function Products() {
-  const products = [
-    { id: 1, url:"https://www.jagsfresh.com/product-details/dairy-milk-silk", name: "Diary Milk Silk", price: 30 },
-    { id: 2, name: "Kitkat", price: 40 },
-    { id: 3, name: "Dark chacolate", price: 45 },
-    { id: 4, name: "Milky Bar", price: 95 },
-    { id: 5, name: "Ferroro Rocher", price: 70 },
-    { id: 6, name: "Munch", price: 25 },
-  ];
+  const { user, products, cart, setCart } = useContext(appContext);
+  const addToCart = (id) => {
+    setCart({ ...cart, [id]: 1 });
+  };
   return (
-    <div>
+    <>
+      <h3>{user.name}</h3>
       <div className="App-Products-Row">
         {products.map((value, index) => (
-          <div className="App-Products-Box" key={index}>
+          <div key={index} className="App-Products-Box">
             <h3>{value.name}</h3>
             <h4>{value.price}</h4>
-            <button>Add to Cart</button>
-            </div>
+            <button onClick={() => addToCart(value.id)}>Add to Cart</button>
+          </div>
         ))}
       </div>
-    </div>
+      ;
+    </>
   );
 }

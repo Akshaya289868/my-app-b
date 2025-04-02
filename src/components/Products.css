@@ -13,7 +13,7 @@
     background-color: rgb(151, 194, 223);
 }
 .App-Products-Row button{
-    background-color: rgb(21, 101, 155);
+    background-color: lightcyan;
     border: 2px solid black;
     border-radius: 5px;
     height: 30px;

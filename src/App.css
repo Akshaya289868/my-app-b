@@ -14,10 +14,10 @@
   }
 }
 body{
-  background-color: #c2e4ee;
+  background-color:pink;
 }
 .App-header {
-  background-color: #282c34;
+  background-color:pink;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ body{
 }
 
 .App-link {
-  color: #61dafb;
+  color: pink;
 }
 
 @keyframes App-logo-spin {
